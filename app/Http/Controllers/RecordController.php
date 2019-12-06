@@ -14,7 +14,7 @@ class RecordController extends Controller
      */
     public function index()
     {
-        return view('records');
+        return view('records', ['records' => Record::all()]);
     }
 
     /**
