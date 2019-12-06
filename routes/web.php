@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/records', 'RecordController@index')->name('records');
+Route::get('/record/{record}', 'RecordController@show')->name('record.show');
