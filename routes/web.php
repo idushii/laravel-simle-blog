@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/records', 'RecordController@index')->name('records');
 Route::get('/record/{record}', 'RecordController@show')->name('record.show');
+Route::get('/record/{record}/edit', 'RecordController@edit')->name('record.edit');
+Route::put('/record/{record}/edit', 'RecordController@update')->name('record.update');

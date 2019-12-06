@@ -9,6 +9,7 @@
                     <h5 class="card-title">{{$record->title}}</h5>
                     <p class="card-text border-bottom pb-2">{{$record->desc}}</p>
                     <p class="card-text">{{$record->content}}</p>
+                    <a href="{{route('record.edit', ['record' => $record->id])}}" class="btn btn-link">Изменить</a>
                 </div>
             </div>
         </div>

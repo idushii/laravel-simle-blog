@@ -57,7 +57,7 @@ class RecordController extends Controller
      */
     public function edit(Record $record)
     {
-        //
+        return view('record-edit', ['record' => $record]);
     }
 
     /**
@@ -69,7 +69,9 @@ class RecordController extends Controller
      */
     public function update(Request $request, Record $record)
     {
-        //
+        $record->fill($request->toArray());
+        $record->save();
+        return redirect()->to('/records');
     }
 
     /**
