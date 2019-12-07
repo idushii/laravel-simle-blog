@@ -82,6 +82,7 @@ class RecordController extends Controller
      */
     public function destroy(Record $record)
     {
-        //
+        $record->forceDelete();
+        return redirect()->to('/records');
     }
 }
