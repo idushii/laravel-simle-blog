@@ -14,7 +14,7 @@ class RecordController extends Controller
      */
     public function index()
     {
-        return view('records', ['records' => Record::all()]);
+        return view('record.all', ['records' => Record::all()]);
     }
 
     /**
@@ -46,7 +46,7 @@ class RecordController extends Controller
      */
     public function show(Record $record)
     {
-        return view('record', ['record' => $record]);
+        return view('record.view', ['record' => $record]);
     }
 
     /**
@@ -57,7 +57,7 @@ class RecordController extends Controller
      */
     public function edit(Record $record)
     {
-        return view('record-edit', ['record' => $record]);
+        return view('record.edit', ['record' => $record]);
     }
 
     /**
