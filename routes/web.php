@@ -19,8 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/records', 'RecordController@index')->name('records');
+
+Route::get ('/record/create', 'RecordController@create')->name('record.create');
+Route::post('/record/create', 'RecordController@store')->name('record.store');
+
 Route::get('/record/{record}', 'RecordController@show')->name('record.show');
-Route::get('/record/create', 'RecordController@create')->name('record.create');
+
 Route::get('/record/{record}/edit', 'RecordController@edit')->name('record.edit');
 Route::put('/record/{record}/edit', 'RecordController@update')->name('record.update');
 Route::delete('/record/{record}/edit', 'RecordController@destroy')->name('record.delete');

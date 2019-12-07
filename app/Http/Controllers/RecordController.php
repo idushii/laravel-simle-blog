@@ -24,7 +24,7 @@ class RecordController extends Controller
      */
     public function create()
     {
-        //
+        return view('record.create');
     }
 
     /**
@@ -35,7 +35,10 @@ class RecordController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $record = new Record();
+        $record->fill($request->toArray());
+        $record->save();
+        return redirect()->to('/records');
     }
 
     /**

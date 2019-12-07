@@ -9,7 +9,6 @@
                     <form action="#" method="POST">
                         @csrf
                         <input type="hidden" name="_method" value="PUT">
-                        <input type="hidden" name="id" value="{{$record->id}}">
                         @include('record.form')
                         <input type="submit" class="btn btn-primary float-right">
                     </form>
