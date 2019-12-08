@@ -16,5 +16,6 @@ jobs:
         FTP_SERVER: files.000webhost.com
         FTP_USERNAME: my-simple-blog
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        REMOTE_DIR: public_html
         ARGS: --delete --verbose
         # --delete arg will delete files on the server if you've deleted them in git
