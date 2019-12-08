@@ -10,7 +10,7 @@ $factory->define(Record::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence(),
         'desc' => $faker->paragraph(),
-        'content' => $faker->text(),
+        'content' => $faker->text(2000),
         'img_url' => $faker->imageUrl(),
     ];
 });
