@@ -17,6 +17,17 @@ class RecordController extends Controller
         return view('record.all', ['records' => Record::all()]);
     }
 
+
+    /**
+     * Return list items of records.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function list()
+    {
+        return Record::all();
+    }
+
     /**
      * Show the form for creating a new resource.
      *
